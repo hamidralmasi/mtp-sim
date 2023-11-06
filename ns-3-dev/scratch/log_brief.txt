@@ -1,0 +1,49 @@
+1)BOTH UNPAUSED
+
+Throughput: 89193.7 Mbps
+Throughput: 9863.1 Mbps
+
+
+2)PauseUnPause
+first socket2 paused
+
+Throughput: 0.0864 Mbps
+Throughput: 9861.75 Mbps
+
+
+3)PauseUnPause
+first socket 1 paused
+Throughput: 99015.2 Mbps
+Throughput: 0.0864 Mbps
+
+
+4) Late UnPause first flow
+Second flow always UNPAUSED
+
+Throughput: 0.95808 Mbps
+Throughput: 9946.52 Mbps
+
+
+5)  Early UnPause first flow
+  Second flow always UNPAUSED
+
+  Throughput: 90068.1 Mbps
+  Throughput: 9946.89 Mbps
+
+6)
+  Paused mid first flow life,
+  Second flow always Unpaused
+
+  Throughput: 44940.7 Mbps
+  Throughput: 9946.85 Mbps
+
+7)
+PauseUnpause starts after 1 ms
+Throughput: 1981.41 Mbps
+Throughput: 215.864 Mbps
+
+
+8)
+PauseUnpause starts after 10 ms
+Throughput: 18230.4 Mbps
+Throughput: 9942.78 Mbps

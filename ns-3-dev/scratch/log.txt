@@ -1,0 +1,529 @@
+1)BOTH UNPAUSED
+
+NS_LOG="Hybrid" ./waf --run "hybrid --simulationEndTime=0.01 --timePeriod=1 --senderToSwitchBW=100Gbps --senderToSwitchDelay=1us --switchFirstPathBW=100Gbps --switchFirstPathDelay=1us --switchSecondPathBW=10Gbps --switchSecondPathDelay=1.5us --minTh=50 --maxTh=150 --bufferSize=2666p --tracing=false"
+Waf: Entering directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+Waf: Leaving directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (1.361s)
+Hybrid:main(): [INFO ] timePeriod:                    1
+Hybrid:main(): [INFO ] senderToSwitchBW:              100Gbps
+Hybrid:main(): [INFO ] senderToSwitchDelay:           1us
+Hybrid:main(): [INFO ] switchFirstPathBW:             100Gbps
+Hybrid:main(): [INFO ] switchFirstPathDelay:          1us
+Hybrid:main(): [INFO ] switchSecondPathBW:            10Gbps
+Hybrid:main(): [INFO ] switchSecondPathDelay:         1.5us
+Hybrid:main(): [INFO ] minTh:                         50
+Hybrid:main(): [INFO ] maxTh:                         150
+Hybrid:main(): [INFO ] bufferSize:                    2666p
+Hybrid:main(): [INFO ] Create nodes.
++0.000000000s -1 Hybrid:main(): [INFO ] Create channels.
++0.000000000s -1 Hybrid:main(): [INFO ] Assign IP Addresses.
++0.000000000s -1 Hybrid:main(): [INFO ] Create Applications.
++0.000000000s -1 Hybrid:main(): [INFO ] Run Simulation.
+Flow 1 (10.1.3.1 -> 10.1.2.2)
+  Tx Packets: 197879
+  Tx Bytes:   111614000
+  TxOffered:  89291.2 Mbps
+  Rx Packets: 197663
+  Rx Bytes:   111492176
+  Throughput: 89193.7 Mbps
+Flow 2 (10.1.3.1 -> 10.1.1.2)
+  Tx Packets: 21235
+  Tx Bytes:   12452944
+  TxOffered:  9962.36 Mbps
+  Rx Packets: 21024
+  Rx Bytes:   12328876
+  Throughput: 9863.1 Mbps
+Flow 3 (10.1.2.2 -> 10.1.3.1)
+  Tx Packets: 98832
+  Tx Bytes:   5139268
+  TxOffered:  4111.41 Mbps
+  Rx Packets: 98812
+  Rx Bytes:   5138228
+  Throughput: 4110.58 Mbps
+Flow 4 (10.1.1.2 -> 10.1.3.1)
+  Tx Packets: 10557
+  Tx Bytes:   548968
+  TxOffered:  439.174 Mbps
+  Rx Packets: 10555
+  Rx Bytes:   548864
+  Throughput: 439.091 Mbps
+
+FirstQLen:
+  #Time(s) QLen (Packets) QLen (Bytes)
+  0.000101 0 0
+  0.001101 0 0
+  0.002101 0 0
+  0.003101 0 0
+  0.004101 0 0
+  0.005101 0 0
+  0.006101 0 0
+  0.007101 0 0
+  0.008101 0 0
+  0.009101 0 0
+SecondQLen:
+#Time(s) QLen (Packets) QLen (Bytes)
+0.000101 0 0
+0.001101 81 47340
+0.002101 43 25284
+0.003101 56 32928
+0.004101 55 32340
+0.005101 63 37044
+0.006101 65 38220
+0.007101 75 44100
+0.008101 83 48804
+0.009101 90 52920
+
+====================================
+====================================
+====================================
+2)PauseUnPause
+first socket2 paused
+
+hamid@ShowjeBook-2 ns-3-dev-git % NS_LOG="Hybrid" ./waf --run "hybrid --simulationEndTime=0.01 --timePeriod=1 --senderToSwitchBW=100Gbps --senderToSwitchDelay=1us --switchFirstPathBW=100Gbps --switchFirstPathDelay=1us --switchSecondPathBW=10Gbps --switchSecondPathDelay=1.5us --minTh=50 --maxTh=150 --bufferSize=2666p --tracing=false"
+Waf: Entering directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+[2752/2801] Compiling scratch/hybrid.cc
+[2763/2801] Linking build/scratch/hybrid
+Waf: Leaving directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (6.090s)
+Hybrid:main(): [INFO ] timePeriod:                    1
+Hybrid:main(): [INFO ] senderToSwitchBW:              100Gbps
+Hybrid:main(): [INFO ] senderToSwitchDelay:           1us
+Hybrid:main(): [INFO ] switchFirstPathBW:             100Gbps
+Hybrid:main(): [INFO ] switchFirstPathDelay:          1us
+Hybrid:main(): [INFO ] switchSecondPathBW:            10Gbps
+Hybrid:main(): [INFO ] switchSecondPathDelay:         1.5us
+Hybrid:main(): [INFO ] minTh:                         50
+Hybrid:main(): [INFO ] maxTh:                         150
+Hybrid:main(): [INFO ] bufferSize:                    2666p
+Hybrid:main(): [INFO ] Create nodes.
++0.000000000s -1 Hybrid:main(): [INFO ] Create channels.
++0.000000000s -1 Hybrid:main(): [INFO ] Assign IP Addresses.
++0.000000000s -1 Hybrid:main(): [INFO ] Create Applications.
++0.000000000s -1 Hybrid:main(): [INFO ] Run Simulation.
+Flow 1 (10.1.3.1 -> 10.1.2.2)
+  Tx Packets: 2
+  Tx Bytes:   108
+  TxOffered:  0.0864 Mbps
+  Rx Packets: 2
+  Rx Bytes:   108
+  Throughput: 0.0864 Mbps
+Flow 2 (10.1.3.1 -> 10.1.1.2)
+  Tx Packets: 21210
+  Tx Bytes:   12450084
+  TxOffered:  9960.07 Mbps
+  Rx Packets: 21001
+  Rx Bytes:   12327192
+  Throughput: 9861.75 Mbps
+Flow 3 (10.1.2.2 -> 10.1.3.1)
+  Tx Packets: 1
+  Tx Bytes:   56
+  TxOffered:  0.0448 Mbps
+  Rx Packets: 1
+  Rx Bytes:   56
+  Throughput: 0.0448 Mbps
+Flow 4 (10.1.1.2 -> 10.1.3.1)
+  Tx Packets: 10538
+  Tx Bytes:   547980
+  TxOffered:  438.384 Mbps
+  Rx Packets: 10536
+  Rx Bytes:   547876
+  Throughput: 438.301 Mbps
+
+
+  #Time(s) QLen (Packets) QLen (Bytes)
+  0.000101 0 0
+  0.001101 0 0
+  0.002101 0 0
+  0.003101 0 0
+  0.004101 0 0
+  0.005101 0 0
+  0.006101 0 0
+  0.007101 0 0
+  0.008101 0 0
+  0.009101 0 0
+
+  #Time(s) QLen (Packets) QLen (Bytes)
+  0.000101 0 0
+  0.001101 36 21168
+  0.002101 49 28812
+  0.003101 52 30576
+  0.004101 59 34692
+  0.005101 69 40572
+  0.006101 0 0
+  0.007101 80 47040
+  0.008101 89 52332
+  0.009101 94 55272
+
+====================================
+====================================
+====================================
+3)PauseUnPause
+first socket 1 paused
+hamid@ShowjeBook-2 ns-3-dev-git % NS_LOG="Hybrid" ./waf --run "hybrid --simulationEndTime=0.01 --timePeriod=1 --senderToSwitchBW=100Gbps --senderToSwitchDelay=1us --switchFirstPathBW=100Gbps --switchFirstPathDelay=1us --switchSecondPathBW=10Gbps --switchSecondPathDelay=1.5us --minTh=50 --maxTh=150 --bufferSize=2666p --tracing=false"
+Waf: Entering directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+[2752/2801] Compiling scratch/hybrid.cc
+[2763/2801] Linking build/scratch/hybrid
+Waf: Leaving directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (5.327s)
+Hybrid:main(): [INFO ] timePeriod:                    1
+Hybrid:main(): [INFO ] senderToSwitchBW:              100Gbps
+Hybrid:main(): [INFO ] senderToSwitchDelay:           1us
+Hybrid:main(): [INFO ] switchFirstPathBW:             100Gbps
+Hybrid:main(): [INFO ] switchFirstPathDelay:          1us
+Hybrid:main(): [INFO ] switchSecondPathBW:            10Gbps
+Hybrid:main(): [INFO ] switchSecondPathDelay:         1.5us
+Hybrid:main(): [INFO ] minTh:                         50
+Hybrid:main(): [INFO ] maxTh:                         150
+Hybrid:main(): [INFO ] bufferSize:                    2666p
+Hybrid:main(): [INFO ] Create nodes.
++0.000000000s -1 Hybrid:main(): [INFO ] Create channels.
++0.000000000s -1 Hybrid:main(): [INFO ] Assign IP Addresses.
++0.000000000s -1 Hybrid:main(): [INFO ] Create Applications.
++0.000000000s -1 Hybrid:main(): [INFO ] Run Simulation.
+Flow 1 (10.1.3.1 -> 10.1.2.2)
+  Tx Packets: 215139
+  Tx Bytes:   123875360
+  TxOffered:  99100.3 Mbps
+  Rx Packets: 214954
+  Rx Bytes:   123768996
+  Throughput: 99015.2 Mbps
+Flow 2 (10.1.3.1 -> 10.1.1.2)
+  Tx Packets: 2
+  Tx Bytes:   108
+  TxOffered:  0.0864 Mbps
+  Rx Packets: 2
+  Rx Bytes:   108
+  Throughput: 0.0864 Mbps
+Flow 3 (10.1.2.2 -> 10.1.3.1)
+  Tx Packets: 107477
+  Tx Bytes:   5588808
+  TxOffered:  4471.05 Mbps
+  Rx Packets: 107455
+  Rx Bytes:   5587664
+  Throughput: 4470.13 Mbps
+Flow 4 (10.1.1.2 -> 10.1.3.1)
+  Tx Packets: 1
+  Tx Bytes:   56
+  TxOffered:  0.0448 Mbps
+  Rx Packets: 1
+  Rx Bytes:   56
+  Throughput: 0.0448 Mbps
+
+  FirstQLen:
+  #Time(s) QLen (Packets) QLen (Bytes)
+  0.000101 0 0
+  0.001101 0 0
+  0.002101 0 0
+  0.003101 0 0
+  0.004101 0 0
+  0.005101 0 0
+  0.006101 0 0
+  0.007101 0 0
+  0.008101 0 0
+  0.009101 0 0
+
+  SecondQLen:
+  #Time(s) QLen (Packets) QLen (Bytes)
+  0.000101 0 0
+  0.001101 0 0
+  0.002101 0 0
+  0.003101 0 0
+  0.004101 0 0
+  0.005101 0 0
+  0.006101 0 0
+  0.007101 0 0
+  0.008101 0 0
+  0.009101 0 0
+  ====================================
+  ====================================
+  ====================================
+4)
+  Late UnPause first flow
+  Second flow always UNPAUSED
+
+  hamid@ShowjeBook-2 ns-3-dev-git % NS_LOG="Hybrid" ./waf --run "hybrid --simulationEndTime=0.05 --timePeriod=1 --senderToSwitchBW=100Gbps --senderToSwitchDelay=1us --switchFirstPathBW=100Gbps --switchFirstPathDelay=1us --switchSecondPathBW=10Gbps --switchSecondPathDelay=1.5us --minTh=50 --maxTh=150 --bufferSize=2666p --tracing=false"
+  Waf: Entering directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+  [2752/2801] Compiling scratch/hybrid.cc
+  [2763/2801] Linking build/scratch/hybrid
+  Waf: Leaving directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+  Build commands will be stored in build/compile_commands.json
+  'build' finished successfully (5.994s)
+  Hybrid:main(): [INFO ] timePeriod:                    1
+  Hybrid:main(): [INFO ] senderToSwitchBW:              100Gbps
+  Hybrid:main(): [INFO ] senderToSwitchDelay:           1us
+  Hybrid:main(): [INFO ] switchFirstPathBW:             100Gbps
+  Hybrid:main(): [INFO ] switchFirstPathDelay:          1us
+  Hybrid:main(): [INFO ] switchSecondPathBW:            10Gbps
+  Hybrid:main(): [INFO ] switchSecondPathDelay:         1.5us
+  Hybrid:main(): [INFO ] minTh:                         50
+  Hybrid:main(): [INFO ] maxTh:                         150
+  Hybrid:main(): [INFO ] bufferSize:                    2666p
+  Hybrid:main(): [INFO ] Create nodes.
+  +0.000000000s -1 Hybrid:main(): [INFO ] Create channels.
+  +0.000000000s -1 Hybrid:main(): [INFO ] Assign IP Addresses.
+  +0.000000000s -1 Hybrid:main(): [INFO ] Create Applications.
+  +0.000000000s -1 Hybrid:main(): [INFO ] Run Simulation.
+  Flow 1 (10.1.3.1 -> 10.1.2.2)
+    Tx Packets: 12
+    Tx Bytes:   5988
+    TxOffered:  0.95808 Mbps
+    Rx Packets: 12
+    Rx Bytes:   5988
+    Throughput: 0.95808 Mbps
+  Flow 2 (10.1.3.1 -> 10.1.1.2)
+    Tx Packets: 106987
+    Tx Bytes:   62305600
+    TxOffered:  9968.9 Mbps
+    Rx Packets: 106747
+    Rx Bytes:   62165760
+    Throughput: 9946.52 Mbps
+  Flow 3 (10.1.2.2 -> 10.1.3.1)
+    Tx Packets: 6
+    Tx Bytes:   316
+    TxOffered:  0.05056 Mbps
+    Rx Packets: 6
+    Rx Bytes:   316
+    Throughput: 0.05056 Mbps
+  Flow 4 (10.1.1.2 -> 10.1.3.1)
+    Tx Packets: 53982
+    Tx Bytes:   2807068
+    TxOffered:  449.131 Mbps
+    Rx Packets: 53979
+    Rx Bytes:   2806912
+    Throughput: 449.106 Mbps
+
+  ====================================
+  ====================================
+  ====================================
+  5)Early UnPause first flow
+  Second flow always UNPAUSED
+
+  hamid@ShowjeBook-2 ns-3-dev-git % NS_LOG="Hybrid" ./waf --run "hybrid --simulationEndTime=0.05 --timePeriod=1 --senderToSwitchBW=100Gbps --senderToSwitchDelay=1us --switchFirstPathBW=100Gbps --switchFirstPathDelay=1us --switchSecondPathBW=10Gbps --switchSecondPathDelay=1.5us --minTh=50 --maxTh=150 --bufferSize=2666p --tracing=false"
+  Waf: Entering directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+  [2752/2801] Compiling scratch/hybrid.cc
+  [2763/2801] Linking build/scratch/hybrid
+  Waf: Leaving directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+  Build commands will be stored in build/compile_commands.json
+  'build' finished successfully (5.401s)
+  Hybrid:main(): [INFO ] timePeriod:                    1
+  Hybrid:main(): [INFO ] senderToSwitchBW:              100Gbps
+  Hybrid:main(): [INFO ] senderToSwitchDelay:           1us
+  Hybrid:main(): [INFO ] switchFirstPathBW:             100Gbps
+  Hybrid:main(): [INFO ] switchFirstPathDelay:          1us
+  Hybrid:main(): [INFO ] switchSecondPathBW:            10Gbps
+  Hybrid:main(): [INFO ] switchSecondPathDelay:         1.5us
+  Hybrid:main(): [INFO ] minTh:                         50
+  Hybrid:main(): [INFO ] maxTh:                         150
+  Hybrid:main(): [INFO ] bufferSize:                    2666p
+  Hybrid:main(): [INFO ] Create nodes.
+  +0.000000000s -1 Hybrid:main(): [INFO ] Create channels.
+  +0.000000000s -1 Hybrid:main(): [INFO ] Assign IP Addresses.
+  +0.000000000s -1 Hybrid:main(): [INFO ] Create Applications.
+  +0.000000000s -1 Hybrid:main(): [INFO ] Run Simulation.
+  Flow 1 (10.1.3.1 -> 10.1.2.2)
+    Tx Packets: 998289
+    Tx Bytes:   563045240
+    TxOffered:  90087.2 Mbps
+    Rx Packets: 998077
+    Rx Bytes:   562925672
+    Throughput: 90068.1 Mbps
+  Flow 2 (10.1.3.1 -> 10.1.1.2)
+    Tx Packets: 107379
+    Tx Bytes:   62292904
+    TxOffered:  9966.86 Mbps
+    Rx Packets: 107166
+    Rx Bytes:   62168092
+    Throughput: 9946.89 Mbps
+  Flow 3 (10.1.2.2 -> 10.1.3.1)
+    Tx Packets: 499039
+    Tx Bytes:   25950032
+    TxOffered:  4152.01 Mbps
+    Rx Packets: 499017
+    Rx Bytes:   25948888
+    Throughput: 4151.82 Mbps
+  Flow 4 (10.1.1.2 -> 10.1.3.1)
+    Tx Packets: 54120
+    Tx Bytes:   2814244
+    TxOffered:  450.279 Mbps
+    Rx Packets: 54118
+    Rx Bytes:   2814140
+    Throughput: 450.262 Mbps
+
+
+    ====================================
+    ====================================
+    ====================================
+6)Paused mid first flow life,
+Second flow always Unpaused
+
+    hamid@ShowjeBook-2 ns-3-dev-git % NS_LOG="Hybrid" ./waf --run "hybrid --simulationEndTime=0.05 --timePeriod=1 --senderToSwitchBW=100Gbps --senderToSwitchDelay=1us --switchFirstPathBW=100Gbps --switchFirstPathDelay=1us --switchSecondPathBW=10Gbps --switchSecondPathDelay=1.5us --minTh=50 --maxTh=150 --bufferSize=2666p --tracing=false"
+Waf: Entering directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+[2752/2801] Compiling scratch/hybrid.cc
+[2763/2801] Linking build/scratch/hybrid
+Waf: Leaving directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (5.188s)
+Hybrid:main(): [INFO ] timePeriod:                    1
+Hybrid:main(): [INFO ] senderToSwitchBW:              100Gbps
+Hybrid:main(): [INFO ] senderToSwitchDelay:           1us
+Hybrid:main(): [INFO ] switchFirstPathBW:             100Gbps
+Hybrid:main(): [INFO ] switchFirstPathDelay:          1us
+Hybrid:main(): [INFO ] switchSecondPathBW:            10Gbps
+Hybrid:main(): [INFO ] switchSecondPathDelay:         1.5us
+Hybrid:main(): [INFO ] minTh:                         50
+Hybrid:main(): [INFO ] maxTh:                         150
+Hybrid:main(): [INFO ] bufferSize:                    2666p
+Hybrid:main(): [INFO ] simulationEndTime:             +5e+07ns
+Hybrid:main(): [INFO ] Create nodes.
++0.000000000s -1 Hybrid:main(): [INFO ] Create channels.
++0.000000000s -1 Hybrid:main(): [INFO ] Assign IP Addresses.
++0.000000000s -1 Hybrid:main(): [INFO ] Create Applications.
++0.000000000s -1 Hybrid:main(): [INFO ] Run Simulation.
+Flow 1 (10.1.3.1 -> 10.1.2.2)
+  Tx Packets: 497995
+  Tx Bytes:   280879424
+  TxOffered:  44940.7 Mbps
+  Rx Packets: 497995
+  Rx Bytes:   280879424
+  Throughput: 44940.7 Mbps
+Flow 2 (10.1.3.1 -> 10.1.1.2)
+  Tx Packets: 107314
+  Tx Bytes:   62308396
+  TxOffered:  9969.34 Mbps
+  Rx Packets: 107072
+  Rx Bytes:   62167788
+  Throughput: 9946.85 Mbps
+Flow 3 (10.1.2.2 -> 10.1.3.1)
+  Tx Packets: 248998
+  Tx Bytes:   12947900
+  TxOffered:  2071.66 Mbps
+  Rx Packets: 248998
+  Rx Bytes:   12947900
+  Throughput: 2071.66 Mbps
+Flow 4 (10.1.1.2 -> 10.1.3.1)
+  Tx Packets: 54131
+  Tx Bytes:   2814816
+  TxOffered:  450.371 Mbps
+  Rx Packets: 54129
+  Rx Bytes:   2814712
+  Throughput: 450.354 Mbps
+
+
+  =====================
+  =====================
+  =====================
+7)
+  PauseUnpause starts after 1 ms
+  hamid@ShowjeBook-2 ns-3-dev-git % NS_LOG="Hybrid" ./waf --run "hybrid --simulationEndTime=0.05 --timePeriod=100 --senderToSwitchBW=100Gbps --senderToSwitchDelay=1us --switchFirstPathBW=100Gbps --switchFirstPathDelay=1us --switchSecondPathBW=10Gbps --switchSecondPathDelay=1.5us --minTh=50 --maxTh=150 --bufferSize=2666p --tracing=false"
+Waf: Entering directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+[2752/2801] Compiling scratch/hybrid.cc
+[2763/2801] Linking build/scratch/hybrid
+Waf: Leaving directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (5.662s)
+Hybrid:main(): [INFO ] timePeriod:                    100
+Hybrid:main(): [INFO ] senderToSwitchBW:              100Gbps
+Hybrid:main(): [INFO ] senderToSwitchDelay:           1us
+Hybrid:main(): [INFO ] switchFirstPathBW:             100Gbps
+Hybrid:main(): [INFO ] switchFirstPathDelay:          1us
+Hybrid:main(): [INFO ] switchSecondPathBW:            10Gbps
+Hybrid:main(): [INFO ] switchSecondPathDelay:         1.5us
+Hybrid:main(): [INFO ] minTh:                         50
+Hybrid:main(): [INFO ] maxTh:                         150
+Hybrid:main(): [INFO ] bufferSize:                    2666p
+Hybrid:main(): [INFO ] simulationEndTime:             +5e+07ns
+Hybrid:main(): [INFO ] Create nodes.
++0.000000000s -1 Hybrid:main(): [INFO ] Create channels.
++0.000000000s -1 Hybrid:main(): [INFO ] Assign IP Addresses.
++0.000000000s -1 Hybrid:main(): [INFO ] Create Applications.
++0.000000000s -1 Hybrid:main(): [INFO ] Run Simulation.
+Flow 1 (10.1.3.1 -> 10.1.2.2)
+  Tx Packets: 21939
+  Tx Bytes:   12383840
+  TxOffered:  1981.41 Mbps
+  Rx Packets: 21939
+  Rx Bytes:   12383840
+  Throughput: 1981.41 Mbps
+Flow 2 (10.1.3.1 -> 10.1.1.2)
+  Tx Packets: 2351
+  Tx Bytes:   1349152
+  TxOffered:  215.864 Mbps
+  Rx Packets: 2351
+  Rx Bytes:   1349152
+  Throughput: 215.864 Mbps
+Flow 3 (10.1.2.2 -> 10.1.3.1)
+  Tx Packets: 10970
+  Tx Bytes:   570444
+  TxOffered:  91.271 Mbps
+  Rx Packets: 10970
+  Rx Bytes:   570444
+  Throughput: 91.271 Mbps
+Flow 4 (10.1.1.2 -> 10.1.3.1)
+  Tx Packets: 1189
+  Tx Bytes:   61832
+  TxOffered:  9.89312 Mbps
+  Rx Packets: 1189
+  Rx Bytes:   61832
+  Throughput: 9.89312 Mbps
+
+
+  ========================
+  ========================
+  ========================
+8)  PauseUnpause starts after 10 ms
+
+  hamid@ShowjeBook-2 ns-3-dev-git % NS_LOG="Hybrid" ./waf --run "hybrid --simulationEndTime=0.05 --timePeriod=100 --senderToSwitchBW=100Gbps --senderToSwitchDelay=1us --switchFirstPathBW=100Gbps --switchFirstPathDelay=1us --switchSecondPathBW=10Gbps --switchSecondPathDelay=1.5us --minTh=50 --maxTh=150 --bufferSize=2666p --tracing=false"
+Waf: Entering directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+[2752/2801] Compiling scratch/hybrid.cc
+[2763/2801] Linking build/scratch/hybrid
+Waf: Leaving directory `/Users/hamid/Desktop/ns-3-dev-git/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (4.794s)
+Hybrid:main(): [INFO ] timePeriod:                    100
+Hybrid:main(): [INFO ] senderToSwitchBW:              100Gbps
+Hybrid:main(): [INFO ] senderToSwitchDelay:           1us
+Hybrid:main(): [INFO ] switchFirstPathBW:             100Gbps
+Hybrid:main(): [INFO ] switchFirstPathDelay:          1us
+Hybrid:main(): [INFO ] switchSecondPathBW:            10Gbps
+Hybrid:main(): [INFO ] switchSecondPathDelay:         1.5us
+Hybrid:main(): [INFO ] minTh:                         50
+Hybrid:main(): [INFO ] maxTh:                         150
+Hybrid:main(): [INFO ] bufferSize:                    2666p
+Hybrid:main(): [INFO ] simulationEndTime:             +5e+07ns
+Hybrid:main(): [INFO ] Create nodes.
++0.000000000s -1 Hybrid:main(): [INFO ] Create channels.
++0.000000000s -1 Hybrid:main(): [INFO ] Assign IP Addresses.
++0.000000000s -1 Hybrid:main(): [INFO ] Create Applications.
++0.000000000s -1 Hybrid:main(): [INFO ] Run Simulation.
+Flow 1 (10.1.3.1 -> 10.1.2.2)
+  Tx Packets: 202003
+  Tx Bytes:   113939936
+  TxOffered:  18230.4 Mbps
+  Rx Packets: 202003
+  Rx Bytes:   113939936
+  Throughput: 18230.4 Mbps
+Flow 2 (10.1.3.1 -> 10.1.1.2)
+  Tx Packets: 107210
+  Tx Bytes:   62157188
+  TxOffered:  9945.15 Mbps
+  Rx Packets: 107184
+  Rx Bytes:   62142404
+  Throughput: 9942.78 Mbps
+Flow 3 (10.1.2.2 -> 10.1.3.1)
+  Tx Packets: 101002
+  Tx Bytes:   5252108
+  TxOffered:  840.337 Mbps
+  Rx Packets: 101002
+  Rx Bytes:   5252108
+  Throughput: 840.337 Mbps
+Flow 4 (10.1.1.2 -> 10.1.3.1)
+  Tx Packets: 53974
+  Tx Bytes:   2806652
+  TxOffered:  449.064 Mbps
+  Rx Packets: 53972
+  Rx Bytes:   2806548
+  Throughput: 449.048 Mbps
+  
